@@ -11,6 +11,9 @@ class JIRA::Worklog < JIRA::DescribedEntity
   # @return [String]
   add_attribute :time_spent, 'timeSpent', :content
 
+  # @return [Number]
+  add_attribute :time_spent_in_seconds, 'timeSpentInSeconds', :to_i
+
   # @param [Handsoap::XmlMason::Node] msg
   # @return [Handsoap::XmlMason::Node]
   def soapify_for msg
